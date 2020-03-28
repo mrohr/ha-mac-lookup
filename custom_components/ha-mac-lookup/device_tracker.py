@@ -22,7 +22,7 @@ class ArpreqDeviceScanner(DeviceScanner):
         try:
             self.hostname = socket.gethostname()
             self.ip = socket.gethostbyname(self.hostname)
-            self.subnet = ".".join(self.ip.split(".")[:-1]
+            self.subnet = ".".join(self.ip.split(".")[:-1])
         except Exception as e:
             _LOGGER.error(e)
 
