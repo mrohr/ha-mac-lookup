@@ -28,6 +28,7 @@ class ArpreqDeviceScanner(DeviceScanner):
 
     def scan_devices(self):
         connected_devices = []
+        _LOGGER.debug("Scanning")
         try:
             for i in range(256):
                 test_ip = "{}.{}".format(self.subnet, i)
@@ -37,6 +38,7 @@ class ArpreqDeviceScanner(DeviceScanner):
         except Exception ase e:
             _LOGGER.error("Unable to scan devices")
             _LOGGER.error(e)
+        _LOGGER.debug("Scanning complete!")
         return connected_devices
 
     def get_device_name(self, device):
