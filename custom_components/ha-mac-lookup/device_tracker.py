@@ -35,7 +35,7 @@ class ArpreqDeviceScanner(DeviceScanner):
                 mac = arpreq.arpreq(test_ip)
                 if mac is not None:
                   connected_devices.append(mac)
-        except Exception ase e:
+        except Exception as e:
             _LOGGER.error("Unable to scan devices")
             _LOGGER.error(e)
         _LOGGER.debug("Scanning complete!")
