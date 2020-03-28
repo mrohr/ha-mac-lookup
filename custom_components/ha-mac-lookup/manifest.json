@@ -1,0 +1,7 @@
+{
+  "domain": "ha-mac-lookup",
+  "name": "HA MAC Lookup",
+  "requirements": ["arpreq==0.3.3"],
+  "dependencies": [],
+  "codeowners": ["@mrohr"]
+}
